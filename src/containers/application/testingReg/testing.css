@@ -1,0 +1,10 @@
+.example{
+background-color:#cccc7854 
+}
+
+.registr-form{
+    margin: '10px';
+    display: 'block';
+    width: '250px';
+    height: '30px';
+}
