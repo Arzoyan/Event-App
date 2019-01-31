@@ -10,14 +10,14 @@ class User extends Component {
 
     exampleFoo(e) {
 
-        let arg=e.target.id;
+        let arg = e.target.id;
         this.props.userIdAction(arg);
     }
 
 
     render() {
         const { user } = this.props
-console.log('asdsad',this.props)
+        console.log('asdsad', this.props)
         return (
             <form  >
                 <h1
@@ -25,7 +25,6 @@ console.log('asdsad',this.props)
                     value={user.id}
                     onClick={(e) => this.exampleFoo(e)}
                 >{user.name}</h1>
-
             </form>
         )
     }

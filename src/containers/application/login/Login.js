@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { LoginAction } from '../../../actions/LoginAction';
+import { connect } from 'react-redux';
 
 class Login extends Component {
     constructor(props) {
@@ -20,13 +21,20 @@ class Login extends Component {
 
 
     submit() {
-
         console.log('your data sned DB', this.props)
+        this.props.LoginAction(this.state);
+
+//// tokeni pastasxany stugel 
+
         return this.props.history.push('/homePage');
     }
 
+
+
+
     render() {
         console.log('sjhgfkjgfl qwglifglwv', this.state)
+        console.log(',khASGFKASGILF', this.props.article);
         return (
             <div>
                 <form>
@@ -38,8 +46,28 @@ class Login extends Component {
                     <button type='button' onClick={() => { this.submit() }} > Submit</button>
                     <Link to='/registration'> Registration </Link>
                 </div>
+
+
+
             </div>
         )
     }
 }
+
+const mapStateToProps = (state)=>{
+    article: state.userToken
+}
+
+
+const mapDispatchToProps = (dispach) => {
+    return {
+        LoginAction: arg => dispach(LoginAction(arg))
+    }
+};
+
+Login = connect(
+    null,
+    mapDispatchToProps,
+)(Login);
+
 export default Login;

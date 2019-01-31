@@ -1,5 +1,5 @@
 export const getNews = () => ({
-  type: 'GET_NEWS',
+  type: 'REGISTRATION_RESULT',
 });
 
 

@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// import {registrationAction} from '../../../actions/registrationAction';
+import { connect } from 'react-redux';
+
+
 
 class Registration extends Component {
     constructor(props) {
@@ -125,6 +129,16 @@ class Registration extends Component {
         )
     }
 }
+
+
+// const mapDispachToProps={
+//     registrationAction:getReagistration
+// }
+
+// Registration=connect(
+//     null,
+//     mapDispachToProps,
+//     )(Registration);
 
 export default Registration;
 
